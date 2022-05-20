@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/CMakeFiles/drogon-populate"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/CMakeFiles/drogon-populate.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/CMakeFiles/drogon-populate-complete.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/drogon-populate-prefix/src/drogon-populate-stamp/drogon-populate-install.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/drogon-populate-prefix/src/drogon-populate-stamp/drogon-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/drogon-populate-prefix/src/drogon-populate-stamp/drogon-populate-download.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/drogon-populate-prefix/src/drogon-populate-stamp/drogon-populate-update.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/drogon-populate-prefix/src/drogon-populate-stamp/drogon-populate-patch.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/drogon-populate-prefix/src/drogon-populate-stamp/drogon-populate-configure.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/drogon-populate-prefix/src/drogon-populate-stamp/drogon-populate-build.rule"
+		},
+		{
+			"file" : "/home/saarcloud/build/_deps/drogon-subbuild/drogon-populate-prefix/src/drogon-populate-stamp/drogon-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"drogon-populate"
+		],
+		"name" : "drogon-populate"
+	}
+}

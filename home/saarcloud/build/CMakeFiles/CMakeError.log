@@ -1,0 +1,77 @@
+Determining if the include file coroutine exists failed with the following output:
+Change Dir: /home/saarcloud/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_138a4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_138a4.dir/build.make CMakeFiles/cmTC_138a4.dir/build
+gmake[1]: Entering directory '/home/saarcloud/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_138a4.dir/CheckIncludeFile.cxx.o
+/usr/bin/c++    -o CMakeFiles/cmTC_138a4.dir/CheckIncludeFile.cxx.o -c /home/saarcloud/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx
+In file included from /home/saarcloud/build/CMakeFiles/CMakeTmp/CheckIncludeFile.cxx:1:
+/usr/include/c++/10/coroutine:295:2: error: #error "the coroutine header requires -fcoroutines"
+  295 | #error "the coroutine header requires -fcoroutines"
+      |  ^~~~~
+gmake[1]: *** [CMakeFiles/cmTC_138a4.dir/build.make:85: CMakeFiles/cmTC_138a4.dir/CheckIncludeFile.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/saarcloud/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_138a4/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/saarcloud/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2ea0f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_2ea0f.dir/build.make CMakeFiles/cmTC_2ea0f.dir/build
+gmake[1]: Entering directory '/home/saarcloud/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2ea0f.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_2ea0f.dir/src.c.o -c /home/saarcloud/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2ea0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ea0f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD CMakeFiles/cmTC_2ea0f.dir/src.c.o -o cmTC_2ea0f 
+/usr/bin/ld: CMakeFiles/cmTC_2ea0f.dir/src.c.o: in function `main':
+src.c:(.text+0x2f): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x3b): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x47): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x58): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_2ea0f.dir/build.make:106: cmTC_2ea0f] Error 1
+gmake[1]: Leaving directory '/home/saarcloud/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_2ea0f/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/saarcloud/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_68f0a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_68f0a.dir/build.make CMakeFiles/cmTC_68f0a.dir/build
+gmake[1]: Entering directory '/home/saarcloud/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_68f0a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_68f0a.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_68f0a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68f0a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_68f0a.dir/CheckFunctionExists.c.o -o cmTC_68f0a  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_68f0a.dir/build.make:106: cmTC_68f0a] Error 1
+gmake[1]: Leaving directory '/home/saarcloud/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_68f0a/fast] Error 2
+
+
+

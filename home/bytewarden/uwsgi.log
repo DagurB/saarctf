@@ -1,0 +1,32 @@
+*** Starting uWSGI 2.0.20 (64bit) on [Fri May 20 14:21:20 2022] ***
+compiled with version: 10.2.1 20210110 on 19 May 2022 12:36:43
+os: Linux-5.10.0-14-amd64 #1 SMP Debian 5.10.113-1 (2022-04-29)
+nodename: vulnbox-team97
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 3
+current working directory: /home/bytewarden
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/bytewarden/bytewarden
+your processes number limit is 15208
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+building mime-types dictionary from file /etc/mime.types...1476 entry found
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/bytewarden.sock fd 4
+Python version: 3.9.2 (default, Feb 28 2021, 17:03:44)  [GCC 10.2.1 20210110]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557550be5070
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364520 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x557550be5070 pid: 697 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 697)
+spawned uWSGI worker 1 (pid: 705, cores: 1)
+spawned uWSGI worker 2 (pid: 706, cores: 1)
+spawned uWSGI worker 3 (pid: 708, cores: 1)
+spawned uWSGI worker 4 (pid: 709, cores: 1)
